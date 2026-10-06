@@ -1,0 +1,7 @@
+-JDK Installation & Configuration: Manual setup of JDK, defining JAVA_HOME, and appending binary utilities (javac.exe, java.exe) to the system Path.
+  
+-Directory management (md, cd) and writing raw source code (notepad Welcome.java).
+-Compilation (javac Welcome.java) and output verification (dir checking for generated .class files).
+-Execution rules (java Welcome targeting compiled class names, not file extensions).
+
+-Tested boundary conditions including multiple classes in a single source file, missing main() method behaviors, class-not-found exceptions, and console output concatenation
