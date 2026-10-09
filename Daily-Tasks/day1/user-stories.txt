@@ -1,0 +1,94 @@
+US1
+
+Configure parking lots, slots and rates
+
+As a parking operator, I want to configure parking lots, slot types and pricing rates so that drivers can find suitable parking and be charged correctly.
+
+Estimate: 5 points
+Acceptance criteria
+- Operator can create and update a parking lot.
+- Operator can configure car, bike and EV slots.
+- Operator can define rates and invalid rates are rejected.
+
+
+US2: View live parking availability
+
+As a driver, I want to see available parking slots for each lot so that I can choose a suitable location.
+
+Estimate: 3 points
+
+Acceptance criteria
+- Availability is displayed for eah lot and slot type.
+- Occupancy and active bookings are reflected.
+- The availability view refreshes within 10 seconds, as required by NFR-P1.
+
+
+US3: Book a parking slot
+
+As a driver, I want to book an available slot for a specified time window so that I can reserve parking before arriving.
+
+Estimate: 5 points
+
+Acceptance criteria
+- Driver selects a lot, slot type and booking time window.
+- System checks availability before confirming the booking.
+- Driver receives the booking reference and booking details.
+
+
+US4: Prevent overlapping bookings
+
+As a parking operator, I want the system to prevent overlapping bookings for the same slot so that two drivers cannot reserve it for conflicting periods.
+
+Estimate: 8 points
+
+Acceptance criteria
+- A booking is rejected if its time interval overlaps a confirmed booking on the same slot.
+- Back-to-back bookings are allowed when their time intervals do not overlap.
+- Concurrent booking attempts are handled atomically, as required by NFR-P2.
+
+
+US5: Record vehicle entry and exit
+
+As a parking operator, I want to record vehicle entry and exit using the vehicle number so that parking sessions can be tracked accurately.
+
+Estimate: 5 points
+
+Acceptance criteria
+- Operator can record entry for a valid vehicle number.
+- Operator can record exit for an active parking session.
+- Vehicle numbers are validated against the configured regex.
+
+
+US6: Calculate parking fees and overstay charges
+
+As a parking operator, I want the system to calculate the parking fee from the actual duration and apply overstay charges so that the final amount is accurate.
+
+Estimate: 5 points
+
+Acceptance criteria
+- The system records parking start and end times.
+- The fee is calculated using the applicable rate card and billing rules.
+- Additional charges are applied when the vehicle exceeds its permitted time.
+
+
+US7: Purchase a monthly parking pass
+
+As a driver, I want to purchase a monthly parking pass so that I can access parking under the pass's terms without making a separate booking for every visit.
+
+Estimate: 5 points
+
+Acceptance criteria
+- Driver can view available monthly passes and their prices.
+- A successful purchase creates a pass with a validity period.
+- Expired or inactive passes cannot be used as valid passes.
+
+
+US8: View hourly occupancy analytics
+
+As an administrator, I want to view parking occupancy by hour so that I can understand demand and plan parking capacity.
+
+Estimate: 5 points
+Acceptance criteria:
+- Administrator can select a lot and reporting period.
+- System displays occupancy grouped by hour.
+- Results are derived from parking and booking records and can be reviewed in a tab
