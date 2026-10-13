@@ -1,0 +1,6 @@
+lot_id,lot_name,slot_id,slot_type,hourly_rate
+LOT001,Central Parking,S001,CAR,40.00
+LOT001,Central Parking,S002,CAR,40.00
+LOT001,Central Parking,S003,BIKE,20.00
+LOT001,Central Parking,S004,BIKE,20.00
+LOT001,Central Parking,S005,EV,50.00
